@@ -41,11 +41,12 @@ check the demo at http://demo.themegrill.com/maintenance-page/
 == Frequently Asked Questions ==
 
 = I have activated plugin and don’t see any changes, looks like plugin is not working. =
-Make sure you have checked the "Activate the Maintenance Page" in Settings->Maintenance Page->General
-Try to check in different browser. Make sure you are logged out.
+- Make sure you have checked the "Activate the Maintenance Page" in Settings->Maintenance Page->General
+
+- Try to check in different browser. Make sure you are logged out.
 
 = No changes on activation/deactivation =
-If you have installed any caching plugins then do deactivate theme or purge the cache.
+- If you have installed any caching plugins then do deactivate theme or purge the cache.
 
 == Screenshots ==
 
