@@ -6,7 +6,7 @@ Donate link: http://themegrill.com/donate/
 Tags: maintenance page, under construction, coming soon, coming soon page, maintenance, maintenace mode, landing page, launch, launch page, splash page, offline, site offline, unavailable, administrator, subscribe, construction
 Requires at least: 3.4
 Tested up to: 4.0
-Stable tag: 1.0
+Stable tag: 1.0.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -42,7 +42,6 @@ check the demo at http://demo.themegrill.com/maintenance-page/
 
 = I have activated plugin and don’t see any changes, looks like plugin is not working. =
 - Make sure you have checked the "Activate the Maintenance Page" in Settings->Maintenance Page->General
-
 - Try to check in different browser. Make sure you are logged out.
 
 = No changes on activation/deactivation =
@@ -59,3 +58,7 @@ check the demo at http://demo.themegrill.com/maintenance-page/
 
 = 1.0 =
 * Initial Public Release
+
+= 1.0.1 =
+* template_redirect hook fired a bit earlier.
+* template not appearing on home page issue fixed.
