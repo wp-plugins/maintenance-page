@@ -5,7 +5,7 @@
  * Description: Allows you to quickly create a maintenance/coming-soon page. You can use this plugin whenever your site is down for maintenance, currently going any upgrade or is in development. Built in options panel to add logo, background image, social icons, color, subscribe field and many more. Get free support at http://themegrill.com/support-forum/ and check the demo at http://demo.themegrill.com/maintenance-page/
  * Author: ThemeGrill
  * Author URI: http://themegrill.com
- * Version: 1.0
+ * Version: 1.0.1
  *
  * Maintenance Page is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -144,7 +144,7 @@ if( !class_exists( 'Maintenance_Page' ) ) {
 		 * @uses add_filter() hook a function to specific filter action
 		 */
 		private function setup_actions() {
-		    add_filter( 'template_redirect', array( $this, 'load_template_file' ), 10, 2 );
+		    add_action( 'template_redirect', array( $this, 'load_template_file' ), 8);
 		    add_action( 'wp_ajax_subscribe_ajax', array( $this, 'subscribe_download' ) );
 		    /** This action is documented in includes/class-maintenance-page-activator.php */
 			register_activation_hook( $this->file , array( 'Maintenance_Page_Activator', 'activate' ) );
@@ -191,13 +191,15 @@ if( !class_exists( 'Maintenance_Page' ) ) {
   		 */
   		public function check_excluded_page() {
   			$is_exclude = false;
-  			$excluded = explode( "\n", $this->setting_options->get_option( 'mp_exclude','mp_basics' ) );
-  			foreach ($excluded as $key => $excluded_slug) {
-  				if( $excluded_slug == trim($_SERVER['REQUEST_URI'], '/') ){
-  					$is_exclude = true;
-  					break;
-  				}
-  			}
+  			if( $this->setting_options->get_option( 'mp_exclude','mp_basics' ) ) {
+	  			$excluded = explode( "\n", $this->setting_options->get_option( 'mp_exclude','mp_basics' ) );
+	  			foreach ($excluded as $key => $excluded_slug) {
+	  				if( $excluded_slug == trim($_SERVER['REQUEST_URI'], '/') ){
+	  					$is_exclude = true;
+	  					break;
+	  				}
+	  			}
+	  		}
   			return $is_exclude;
   		}
 
