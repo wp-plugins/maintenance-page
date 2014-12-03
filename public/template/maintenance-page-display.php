@@ -125,7 +125,7 @@ do_action( 'mp_head' ); ?>
 			</div><!-- .social-icons -->
 		</section>
 
-		<?php if( $option->get_option( 'mp_subscribe_activate','mp_subscribe' ) ) { ?>
+		<?php if( $option->get_option( 'mp_subscribe_activate','mp_subscribe' ) == 'on' ) { ?>
 			<section id="newsletter">
 				<div class="wrapper clearfix">
 					<div class="mp-one-half">
