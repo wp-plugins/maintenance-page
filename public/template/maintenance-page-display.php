@@ -7,9 +7,9 @@
 <meta name="description" content="">
 <meta name="author" content="">
 <title>
-	<?php 
+	<?php
 	$title = get_bloginfo( 'name');
-	$site_description = get_bloginfo( 'description' ); 
+	$site_description = get_bloginfo( 'description' );
 	if( !empty( $site_description) )  {
 		$title .= ' &#124; '. $site_description;
 	}
@@ -20,7 +20,7 @@
 <link rel="stylesheet" href="<?php echo $this->plugin_url .'public/font-awesome/css/font-awesome.min.css' ?>">
 <link href='//fonts.googleapis.com/css?family=Signika+Negative:300,400' rel='stylesheet' type='text/css'>
 
-<?php 
+<?php
 wp_print_scripts('jquery-core');
 do_action('mp_script');
 if( preg_match('/(?i)msie [1-9]/',$_SERVER['HTTP_USER_AGENT'] ) ) { ?>
@@ -34,25 +34,28 @@ if( preg_match('/(?i)msie [1-9]/',$_SERVER['HTTP_USER_AGENT'] ) ) { ?>
 <?php }
 if( !empty( $_POST['subscriber_email']) ) {
 	$file = $this->plugin_dir . 'includes/lib/subscriber_handler.php';
-	include($file); 
+	include($file);
 }
-$background_image = $option->get_option( 'mp_background_image','mp_basics',''); ?>
+$background_image = $option->get_option( 'mp_background_image','mp_basics','');
+$background_image_deactivate = $option->get_option( 'mp_background_image_deactivate','mp_basics','off'); ?>
 <style type="text/css">
-	<?php 
-	if( $background_image ) { ?>
-		body {
-			background: url("<?php echo $background_image; ?>") no-repeat fixed center;
-			background-size: cover;
+	<?php
+	if( $background_image_deactivate == "off" ) {
+		if( $background_image ) { ?>
+			body {
+				background: url("<?php echo $background_image; ?>") no-repeat fixed center;
+				background-size: cover;
+			}
+		<?php
+		} else { ?>
+			body {
+				background: url("<?php echo $this->plugin_url.'public/images/background.jpg'; ?>") no-repeat fixed center;
+				background-size: cover;
+			}
+		<?php
 		}
-	<?php 
-	} else { ?>
-		body {
-			background: url("<?php echo $this->plugin_url.'public/images/background.jpg'; ?>") no-repeat fixed center;
-			background-size: cover;
-		}
-	<?php 
-	} ?>
-	<?php if( $option->get_option( 'mp_background_color','mp_basics') != '#ffffff' ) { ?>
+	}
+	if( $option->get_option( 'mp_background_color','mp_basics') != '#ffffff' ) { ?>
 		body {
 			background-color: <?php echo $option->get_option( 'mp_background_color','mp_basics',''); ?>;
 		}
@@ -76,14 +79,14 @@ $background_image = $option->get_option( 'mp_background_image','mp_basics',''); 
 if ( $option->get_option( 'mp_css','mp_basics') ) { ?>
 	<style type="text/css"><?php echo stripslashes( $option->get_option( 'mp_css','mp_basics') );	?></style>
     <?php
-} 
+}
 do_action( 'mp_head' ); ?>
 </head>
 
 <body class="home">
 	<div class="page-wrap" id="content-wrap">
 		<section id="content">
-			<?php 
+			<?php
 			$logo = $option->get_option( 'mp_logo','mp_basics','');
 			if( !empty( $logo ) ) { ?>
 				<div class="logo">
@@ -91,7 +94,7 @@ do_action( 'mp_head' ); ?>
 				</div><!-- .logo -->
 			<?php } ?>
 
-			<?php 
+			<?php
 			$title = $option->get_option( 'mp_heading','mp_basics','Title');
 				if( !empty( $title ) ) { ?>
 					<h1 class="site-title"><?php echo $title ?></a></h1>
@@ -102,11 +105,11 @@ do_action( 'mp_head' ); ?>
 				</div>
 			<?php } ?>
 			<div class="social-icons clearfix">
-				<ul>	
-					<?php if( $option->get_option( 'mp_facebook','mp_social' ) ) { ?> 			
+				<ul>
+					<?php if( $option->get_option( 'mp_facebook','mp_social' ) ) { ?>
 						<li class="facebook"><a href="<?php echo esc_url( $option->get_option( 'mp_facebook','mp_social' ) );?>"><i class="fa fa-facebook"></i></a></li>
 					<?php } ?>
-					<?php if( $option->get_option( 'mp_twitter','mp_social' ) ) { ?>	
+					<?php if( $option->get_option( 'mp_twitter','mp_social' ) ) { ?>
 						<li class="twitter"><a href="<?php echo esc_url( $option->get_option( 'mp_twitter','mp_social' ) ); ?>"><i class="fa fa-twitter"></i></a></li>
 					<?php } ?>
 					<?php if( $option->get_option( 'mp_pinterest','mp_social' ) ) { ?>

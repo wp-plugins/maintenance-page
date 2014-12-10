@@ -108,6 +108,12 @@ class MP_Settings {
                     'sanitize_callback' => 'esc_url_raw'
                 ),
                 array(
+                    'name' => 'mp_background_image_deactivate',
+                    'label' => __( 'Deactivate', 'maintenance-page' ),
+                    'desc' => __( 'Deactivate the Background Image', 'maintenance-page' ),
+                    'type' => 'checkbox'
+                ),
+                array(
                     'name' => 'mp_background_color',
                     'label' => __( 'Background Color', 'maintenance-page' ),
                     'desc' => __( 'Choose Background Color', 'maintenance-page' ),
@@ -292,16 +298,16 @@ class MP_Settings {
      * @param string $links
      * @return array
      */
-    function add_settings_link($links) { 
-        $settings_link = '<a href="options-general.php?page=mp_settings_api">'.__( 'Settings','maintenance-page' ).'</a>'; 
-        array_unshift($links, $settings_link); 
-        return $links; 
+    function add_settings_link($links) {
+        $settings_link = '<a href="options-general.php?page=mp_settings_api">'.__( 'Settings','maintenance-page' ).'</a>';
+        array_unshift($links, $settings_link);
+        return $links;
     }
 
     /**
      * Sends ajax request to download subscriber list.
      */
-    function download_csv_button() { 
+    function download_csv_button() {
         global $wpdb;
         $count = $wpdb->get_var( "SELECT COUNT(*) FROM {$wpdb->prefix}maintenance_page" );
         if( $count == 0 ) {
@@ -317,7 +323,7 @@ class MP_Settings {
     public function enqueue_admin_styles() {
             wp_enqueue_style('mp-admin-styles', mp()->plugin_url . 'includes/admin/css/admin.css');
     }
- 
+
 
     /**
      * Adds the sidebar section on the admin page
@@ -328,7 +334,7 @@ class MP_Settings {
             <div class="metabox-holder">
                 <div class="postbox">
                     <h3><?php esc_attr_e( 'Plugin Info', 'spacious' ); ?></h3>
-                    <div class="inside"> 
+                    <div class="inside">
                        <div class="option-btn"><a class="btn support" target="_blank" href="<?php echo esc_url( 'http://themegrill.com/support-forum/' ); ?>"><?php esc_attr_e( 'Free Support' , 'maintenance-page' ); ?></a></div>
                         <div class="option-btn"><a class="btn demo" target="_blank" href="<?php echo esc_url( 'http://demo.themegrill.com/maintenance-page/' ); ?>"><?php esc_attr_e( 'View Demo' , 'maintenance-page' ); ?></a></div>
                         <div align="center" style="padding:5px; background-color:#fafafa;border: 1px solid #CCC;margin-bottom: 10px;">

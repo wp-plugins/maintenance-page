@@ -5,7 +5,7 @@
  * Description: Allows you to quickly create a maintenance/coming-soon page. You can use this plugin whenever your site is down for maintenance, currently going any upgrade or is in development. Built in options panel to add logo, background image, social icons, color, subscribe field and many more. Get free support at http://themegrill.com/support-forum/ and check the demo at http://demo.themegrill.com/maintenance-page/
  * Author: ThemeGrill
  * Author URI: http://themegrill.com
- * Version: 1.0.2
+ * Version: 1.0.3
  *
  * Maintenance Page is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -164,7 +164,7 @@ if( !class_exists( 'Maintenance_Page' ) ) {
 
   		/**
   		 * Loads the template file
-  		 * 
+  		 *
   		 * @since 1.0
   		 * @return void
   		 */
@@ -180,12 +180,12 @@ if( !class_exists( 'Maintenance_Page' ) ) {
 	         		}
 	         	}
 	         }
-			
+
   		}
 
   		/**
   		 * Checks for page to exclude for redirect.
-  		 * 
+  		 *
   		 * @since 1.0
   		 * @return boolean
   		 */
@@ -205,7 +205,7 @@ if( !class_exists( 'Maintenance_Page' ) ) {
 
   		/**
   		 * Send 503 unavailable header status if activated
-  		 * 
+  		 *
   		 * @since 1.0
   		 */
   		function check_header_status() {
@@ -227,7 +227,7 @@ if( !class_exists( 'Maintenance_Page' ) ) {
 
   		/**
   		 * Download subscibers list
-  		 * 
+  		 *
   		 * @since 1.0
   		 * @global $wpdb
   		 * @return void
@@ -255,7 +255,7 @@ if( !class_exists( 'Maintenance_Page' ) ) {
 
 		/**
   		 * Shows admin notice on/off
-  		 * 
+  		 *
   		 * @since 1.0
   		 * @global $wp_admin_bar
   		 * @return void
@@ -263,7 +263,7 @@ if( !class_exists( 'Maintenance_Page' ) ) {
 		function admin_bar_notice() {
 		    global $wp_admin_bar;
 			$value = $this->setting_options->get_option( 'mp_activate','mp_basics' );
-		    if( $value == 'on') { 
+		    if( $value == 'on') {
 		    	$argsParent=array(
 			        'id' => 'admin_bar_notice',
 			        'title' => __( 'Maintenance Page On','maintenance-page' ),
@@ -282,7 +282,7 @@ if( !class_exists( 'Maintenance_Page' ) ) {
 		    }
 		    $wp_admin_bar->add_menu( $argsParent );
 
-		   
+
 		}
   	}
 }

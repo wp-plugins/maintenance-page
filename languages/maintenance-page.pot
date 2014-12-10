@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Maintenance Page\n"
-"POT-Creation-Date: 2014-11-06 15:37+0545\n"
-"PO-Revision-Date: 2014-11-06 15:37+0545\n"
+"POT-Creation-Date: 2014-12-10 10:46+0545\n"
+"PO-Revision-Date: 2014-12-10 10:46+0545\n"
 "Last-Translator: \n"
 "Language-Team: ThemeGrill <themegrill@gmail.com>\n"
 "Language: en\n"
@@ -29,11 +29,11 @@ msgid "Social Icons"
 msgstr ""
 
 #: includes/admin/settings-api.php:53
-#: public/template/maintenance-page-display.php:148
+#: public/template/maintenance-page-display.php:151
 msgid "Subscribe"
 msgstr ""
 
-#: includes/admin/settings-api.php:69 includes/admin/settings-api.php:213
+#: includes/admin/settings-api.php:69 includes/admin/settings-api.php:219
 msgid "Activate"
 msgstr ""
 
@@ -82,158 +82,166 @@ msgid "Upload background Image"
 msgstr ""
 
 #: includes/admin/settings-api.php:112
-msgid "Background Color"
+msgid "Deactivate"
 msgstr ""
 
 #: includes/admin/settings-api.php:113
+msgid "Deactivate the Background Image"
+msgstr ""
+
+#: includes/admin/settings-api.php:118
+msgid "Background Color"
+msgstr ""
+
+#: includes/admin/settings-api.php:119
 msgid "Choose Background Color"
 msgstr ""
 
-#: includes/admin/settings-api.php:120
+#: includes/admin/settings-api.php:126
 msgid "Font Color"
 msgstr ""
 
-#: includes/admin/settings-api.php:121
+#: includes/admin/settings-api.php:127
 msgid "Choose font color"
 msgstr ""
 
-#: includes/admin/settings-api.php:128
+#: includes/admin/settings-api.php:134
 msgid "Link Color"
 msgstr ""
 
-#: includes/admin/settings-api.php:129
+#: includes/admin/settings-api.php:135
 msgid "Choose Link color"
 msgstr ""
 
-#: includes/admin/settings-api.php:136
+#: includes/admin/settings-api.php:142
 msgid "Custom CSS"
 msgstr ""
 
-#: includes/admin/settings-api.php:137
+#: includes/admin/settings-api.php:143
 msgid "Enter Your Custom CSS here"
 msgstr ""
 
-#: includes/admin/settings-api.php:143
+#: includes/admin/settings-api.php:149
 msgid "Exclude"
 msgstr ""
 
-#: includes/admin/settings-api.php:144
+#: includes/admin/settings-api.php:150
 msgid "Enter the page/post slug. One slug per line"
 msgstr ""
 
-#: includes/admin/settings-api.php:150
+#: includes/admin/settings-api.php:156
 msgid "Powered by ThemeGrill"
 msgstr ""
 
-#: includes/admin/settings-api.php:151
+#: includes/admin/settings-api.php:157
 msgid "How about a footer credit for our hardwork"
 msgstr ""
 
-#: includes/admin/settings-api.php:154
+#: includes/admin/settings-api.php:160
 msgid "Yes - we love you"
 msgstr ""
 
-#: includes/admin/settings-api.php:155
+#: includes/admin/settings-api.php:161
 msgid "Nope"
 msgstr ""
 
-#: includes/admin/settings-api.php:163
+#: includes/admin/settings-api.php:169
 msgid "Facebook"
 msgstr ""
 
-#: includes/admin/settings-api.php:164
+#: includes/admin/settings-api.php:170
 msgid "Enter Facebook url"
 msgstr ""
 
-#: includes/admin/settings-api.php:171
+#: includes/admin/settings-api.php:177
 msgid "Twitter"
 msgstr ""
 
-#: includes/admin/settings-api.php:172
+#: includes/admin/settings-api.php:178
 msgid "Enter Twitter url"
 msgstr ""
 
-#: includes/admin/settings-api.php:179
+#: includes/admin/settings-api.php:185
 msgid "Pinterest"
 msgstr ""
 
-#: includes/admin/settings-api.php:180
+#: includes/admin/settings-api.php:186
 msgid "Enter Pinterest url"
 msgstr ""
 
-#: includes/admin/settings-api.php:187
+#: includes/admin/settings-api.php:193
 msgid "GooglePlus"
 msgstr ""
 
-#: includes/admin/settings-api.php:188
+#: includes/admin/settings-api.php:194
 msgid "Enter GooglePlus url"
 msgstr ""
 
-#: includes/admin/settings-api.php:195
+#: includes/admin/settings-api.php:201
 msgid "Youtube"
 msgstr ""
 
-#: includes/admin/settings-api.php:196
+#: includes/admin/settings-api.php:202
 msgid "Enter Youtube url"
 msgstr ""
 
-#: includes/admin/settings-api.php:203
+#: includes/admin/settings-api.php:209
 msgid "LinkedIn"
 msgstr ""
 
-#: includes/admin/settings-api.php:204
+#: includes/admin/settings-api.php:210
 msgid "Enter LinkedIn url"
 msgstr ""
 
-#: includes/admin/settings-api.php:214
+#: includes/admin/settings-api.php:220
 msgid "Activate subscribe feature"
 msgstr ""
 
-#: includes/admin/settings-api.php:219
+#: includes/admin/settings-api.php:225
 msgid "Subscribe Info Title"
 msgstr ""
 
-#: includes/admin/settings-api.php:220
+#: includes/admin/settings-api.php:226
 msgid "Title For the Subscribe information"
 msgstr ""
 
-#: includes/admin/settings-api.php:227
+#: includes/admin/settings-api.php:233
 msgid "Subscribe Message"
 msgstr ""
 
-#: includes/admin/settings-api.php:228
+#: includes/admin/settings-api.php:234
 msgid "Message for subscribe text"
 msgstr ""
 
-#: includes/admin/settings-api.php:234
+#: includes/admin/settings-api.php:240
 msgid "Download"
 msgstr ""
 
-#: includes/admin/settings-api.php:296
+#: includes/admin/settings-api.php:302
 msgid "Settings"
 msgstr ""
 
-#: includes/admin/settings-api.php:308
+#: includes/admin/settings-api.php:314
 msgid "No subscribers yet"
 msgstr ""
 
-#: includes/admin/settings-api.php:310
+#: includes/admin/settings-api.php:316
 msgid "Download Subscriber CSV list"
 msgstr ""
 
-#: includes/admin/settings-api.php:330
+#: includes/admin/settings-api.php:336
 msgid "Plugin Info"
 msgstr ""
 
-#: includes/admin/settings-api.php:332
+#: includes/admin/settings-api.php:338
 msgid "Free Support"
 msgstr ""
 
-#: includes/admin/settings-api.php:333
+#: includes/admin/settings-api.php:339
 msgid "View Demo"
 msgstr ""
 
-#: includes/admin/settings-api.php:335
+#: includes/admin/settings-api.php:341
 msgid "If you like our work. Buy us a beer."
 msgstr ""
 
@@ -249,24 +257,24 @@ msgstr ""
 msgid "Cheatin&#8217; huh?"
 msgstr ""
 
-#: maintenance-page.php:267
+#: maintenance-page.php:269
 msgid "Maintenance Page On"
 msgstr ""
 
-#: maintenance-page.php:275
+#: maintenance-page.php:277
 msgid "Maintenance Page Off"
 msgstr ""
 
-#: public/template/maintenance-page-display.php:145
+#: public/template/maintenance-page-display.php:148
 msgid "Enter email to subscribe"
 msgstr ""
 
-#: public/template/maintenance-page-display.php:158
+#: public/template/maintenance-page-display.php:161
 #, php-format
 msgid "Copyright &copy; <a href=\"%1$s\">%2$s </a>"
 msgstr ""
 
-#: public/template/maintenance-page-display.php:160
+#: public/template/maintenance-page-display.php:163
 #, php-format
 msgid "Powered by <a href=\"%s\">ThemeGrill</a>"
 msgstr ""
