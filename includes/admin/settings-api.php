@@ -335,8 +335,14 @@ class MP_Settings {
                 <div class="postbox">
                     <h3><?php esc_attr_e( 'Plugin Info', 'spacious' ); ?></h3>
                     <div class="inside">
-                       <div class="option-btn"><a class="btn support" target="_blank" href="<?php echo esc_url( 'http://themegrill.com/support-forum/' ); ?>"><?php esc_attr_e( 'Free Support' , 'maintenance-page' ); ?></a></div>
-                        <div class="option-btn"><a class="btn demo" target="_blank" href="<?php echo esc_url( 'http://demo.themegrill.com/maintenance-page/' ); ?>"><?php esc_attr_e( 'View Demo' , 'maintenance-page' ); ?></a></div>
+                        <div class="option-btn">
+                           <a href="<?php echo esc_url( 'http://themegrill.com/plugins/maintenance-page-pro/' ); ?>" target="_blank" rel="nofollow">
+                              <img src="<?php echo mp()->plugin_url . 'includes/admin/images/maintenance-page-pro.png';?>" alt="<?php _e('maintenance-page-pro', 'maintenance-page'); ?>">
+                           </a>
+                        </div>
+                        <div class="option-btn"><a class="btn upgrade" target="_blank" href="<?php echo esc_url( 'http://themegrill.com/plugins/maintenance-page-pro/' ); ?>"><?php esc_attr_e( 'Upgrade' , 'maintenance-page' ); ?></a></div>
+                        <div class="option-btn"><a class="btn support" target="_blank" href="<?php echo esc_url( 'http://themegrill.com/support-forum/' ); ?>"><?php esc_attr_e( 'Free Support' , 'maintenance-page' ); ?></a></div>
+                        <div class="option-btn"><a class="btn demo" target="_blank" href="<?php echo esc_url( 'http://themegrill.com/plugins/maintenance-page/' ); ?>"><?php esc_attr_e( 'View Demo' , 'maintenance-page' ); ?></a></div>
                         <div align="center" style="padding:5px; background-color:#fafafa;border: 1px solid #CCC;margin-bottom: 10px;">
                         <strong><?php esc_attr_e( 'If you like our work. Buy us a beer.', 'esteem' ); ?></strong>
                         <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
