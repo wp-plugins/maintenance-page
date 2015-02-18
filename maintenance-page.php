@@ -5,7 +5,7 @@
  * Description: Allows you to quickly create a maintenance/coming-soon page. You can use this plugin whenever your site is down for maintenance, currently going any upgrade or is in development. Built in options panel to add logo, background image, social icons, color, subscribe field and many more. Get free support at http://themegrill.com/support-forum/ and check the demo at http://demo.themegrill.com/maintenance-page/
  * Author: ThemeGrill
  * Author URI: http://themegrill.com
- * Version: 1.0.3
+ * Version: 1.0.4
  *
  * Maintenance Page is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
