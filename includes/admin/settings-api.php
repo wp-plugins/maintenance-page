@@ -337,7 +337,7 @@ class MP_Settings {
                     <div class="inside">
                         <div class="option-btn">
                            <a href="<?php echo esc_url( 'http://themegrill.com/plugins/maintenance-page-pro/' ); ?>" target="_blank" rel="nofollow">
-                              <img src="<?php echo mp()->plugin_url . 'includes/admin/images/maintenance-page-pro.png';?>" alt="<?php _e('maintenance-page-pro', 'maintenance-page'); ?>">
+                              <img src="<?php echo mp()->plugin_url . 'includes/admin/images/maintenance-page-pro.jpg';?>" alt="<?php _e('maintenance-page-pro', 'maintenance-page'); ?>">
                            </a>
                         </div>
                         <div class="option-btn"><a class="btn upgrade" target="_blank" href="<?php echo esc_url( 'http://themegrill.com/plugins/maintenance-page-pro/' ); ?>"><?php esc_attr_e( 'Upgrade' , 'maintenance-page' ); ?></a></div>
