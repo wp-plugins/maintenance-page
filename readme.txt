@@ -73,6 +73,9 @@ check the demo at http://themegrill.com/plugins/maintenance-page/
 4. Subscribe Settings Page
 
 == Changelog ==
+= 1.0.6 =
+* Exclude feature bug fixed.
+
 = 1.0.5 =
 * Options panel sidebar styling issue fixed.
 
