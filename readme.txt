@@ -5,8 +5,8 @@ Contributors: ThemeGrill
 Donate link: http://themegrill.com/donate/
 Tags: maintenance page, under construction, coming soon, coming soon page, maintenance, maintenace mode, landing page, launch, launch page, splash page, offline, site offline, unavailable, administrator, subscribe, construction
 Requires at least: 3.4
-Tested up to: 4.0
-Stable tag: 1.0.3
+Tested up to: 4.1.1
+Stable tag: 1.0.6
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -18,7 +18,7 @@ Allows you to quickly create a maintenance/coming-soon page. You can use this pl
 
 Get free support at http://themegrill.com/support-forum/
 
-check the demo at http://demo.themegrill.com/maintenance-page/
+check the demo at http://themegrill.com/plugins/maintenance-page/
 
 ### Features And Options:
 * Responsive design looks great on your devices.
@@ -31,6 +31,24 @@ check the demo at http://demo.themegrill.com/maintenance-page/
 * Add title, text message option
 * Option to exclude page
 * Custom CSS
+
+### Maintenance Page Pro:
+* Counter
+* Contact Form
+* MailChimp integration
+* Ip Whitelist
+* Background Slider
+* Background Video
+* Progress Bar
+* Google font option
+* Analytic Code Option
+* Role Based access
+* Font size option
+* About Page
+
+[Upgrade to Maintenance Page Pro &raquo;](http://themegrill.com/plugins/maintenance-page-pro/)
+
+[View Maintenance Page Pro &raquo;](http://demo.themegrill.com/maintenance-page-pro/)
 
 == Installation ==
 
@@ -55,6 +73,15 @@ check the demo at http://demo.themegrill.com/maintenance-page/
 4. Subscribe Settings Page
 
 == Changelog ==
+= 1.0.6 =
+* Exclude feature bug fixed.
+
+= 1.0.5 =
+* Options panel sidebar styling issue fixed.
+
+= 1.0.4 =
+* Options panel media uploader bug fixed.
+* Information for Pro added in options page.
 
 = 1.0.3 =
 * Option added to deactivate the background Image

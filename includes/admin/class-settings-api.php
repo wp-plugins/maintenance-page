@@ -145,7 +145,7 @@ class MP_Settings_API {
             }
         }
 
-       
+
         // creates our settings in the options table
         foreach ( $this->settings_sections as $section ) {
             register_setting( $section['id'], $section['id'], array( $this, 'sanitize_options' ) );
@@ -522,12 +522,6 @@ class MP_Settings_API {
 
                     var self = $(this);
 
-                    // If the media frame already exists, reopen it.
-                    if ( file_frame ) {
-                        file_frame.open();
-                        return false;
-                    }
-
                     // Create the media frame.
                     file_frame = wp.media.frames.file_frame = wp.media({
                         title: self.data('uploader_title'),
@@ -551,10 +545,10 @@ class MP_Settings_API {
 
         <style type="text/css">
             /** WordPress 3.8 Fix **/
-            .form-table th { 
-                padding: 20px 10px; 
+            .form-table th {
+                padding: 20px 10px;
             }
-            #wpbody-content .metabox-holder { 
+            #wpbody-content .metabox-holder {
                 padding-top: 5px;
                 width: 70%;
                 float: left;
