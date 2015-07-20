@@ -5,7 +5,7 @@ Contributors: ThemeGrill
 Donate link: http://themegrill.com/donate/
 Tags: maintenance page, under construction, coming soon, coming soon page, maintenance, maintenace mode, landing page, launch, launch page, splash page, offline, site offline, unavailable, administrator, subscribe, construction
 Requires at least: 3.4
-Tested up to: 4.1.1
+Tested up to: 4.2.2
 Stable tag: 1.0.6
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -73,6 +73,9 @@ check the demo at http://themegrill.com/plugins/maintenance-page/
 4. Subscribe Settings Page
 
 == Changelog ==
+= 1.0.7 =
+* Multisite Compatible.
+
 = 1.0.6 =
 * Exclude feature bug fixed.
 

@@ -5,7 +5,7 @@
  * Description: Allows you to quickly create a maintenance/coming-soon page. You can use this plugin whenever your site is down for maintenance, currently going any upgrade or is in development. Built in options panel to add logo, background image, social icons, color, subscribe field and many more. Get free support at http://themegrill.com/support-forum/ and check the demo at http://demo.themegrill.com/maintenance-page/
  * Author: ThemeGrill
  * Author URI: http://themegrill.com
- * Version: 1.0.6
+ * Version: 1.0.7
  *
  * Maintenance Page is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -149,6 +149,9 @@ if( !class_exists( 'Maintenance_Page' ) ) {
 		    /** This action is documented in includes/class-maintenance-page-activator.php */
 			register_activation_hook( $this->file , array( 'Maintenance_Page_Activator', 'activate' ) );
 			add_action('admin_bar_menu', array( $this, 'admin_bar_notice' ), 999);
+         //fires when new blog is created in multisite.
+         add_action( 'wpmu_new_blog', array( $this, 'create_subscribe_table_mu' ), 10, 6 );
+         add_filter( 'wpmu_drop_tables', array( $this, 'delete_subscribe_table_mu' ) );
 		}
 
 		/**
@@ -284,6 +287,34 @@ if( !class_exists( 'Maintenance_Page' ) ) {
 
 
 		}
+
+      /**
+       * Create subscribe table for new multisite created
+       *
+       * @since 1.0.7
+       * @return void
+       */
+      public function create_subscribe_table_mu( $blog_id, $user_id, $domain, $path, $site_id, $meta ) {
+         if ( is_plugin_active_for_network( 'maintenance-page/maintenance-page.php' ) ) {
+            switch_to_blog( $blog_id );
+            Maintenance_Page_Activator::create_subscribe_table();
+            restore_current_blog();
+         }
+      }
+
+      /**
+       * Delete subscribe table when multisite blog is deleted
+       *
+       * @since 1.0.7
+       * @global $wpdb
+       * @return void
+       */
+      public function delete_subscribe_table_mu( $tables ) {
+         global $wpdb;
+         $tables[] = $wpdb->prefix . 'maintenance_page';
+         return $tables;
+      }
+
   	}
 }
 
