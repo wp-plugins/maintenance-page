@@ -97,7 +97,7 @@ class MP_Settings {
                     'label' => __( 'Text Message', 'maintenance-page' ),
                     'desc' => __( 'Message For your Viewer', 'maintenance-page' ),
                     'type' => 'wysiwyg',
-                    'sanitize_callback' => 'wp_kses_post'
+                    'sanitize_callback' => 'mp_filter_kses'
                 ),
                 array(
                     'name'  => 'mp_background_image',
