@@ -40,6 +40,7 @@ class MP_Settings_API {
 
     public function __construct() {
         add_action( 'admin_enqueue_scripts', array( $this, 'admin_enqueue_scripts' ) );
+        $this->mp_sanitize_callbacks();
     }
 
     /**
@@ -145,11 +146,26 @@ class MP_Settings_API {
             }
         }
 
-
         // creates our settings in the options table
         foreach ( $this->settings_sections as $section ) {
             register_setting( $section['id'], $section['id'], array( $this, 'sanitize_options' ) );
         }
+    }
+
+    /**
+     * collection of our own sanitization functions
+     */
+    function mp_sanitize_callbacks() {
+
+      function mp_filter_kses( $data ) {
+         if ( current_user_can('unfiltered_html') ) {
+            return $data;
+         } else {
+            return wp_kses_post( $data );
+         }
+
+      }
+
     }
 
     /**
@@ -350,7 +366,6 @@ class MP_Settings_API {
     function callback_hook( $args ) {
         do_action( $args['id'] );
     }
-
 
     /**
      * Sanitize callback for Settings API
